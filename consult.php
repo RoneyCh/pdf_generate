@@ -3,11 +3,16 @@ include_once('connection.php');
 require_once 'fpdf184/fpdf.php';
 
 
-$get_user = "SELECT * FROM usuario as u LEFT JOIN endereco as en ON en.usuario_id=u.id";
+$get_user = "SELECT * FROM usuario as u INNER JOIN endereco as en ON en.usuario_id=u.id";
 $result_user = mysqli_query($conn, $get_user);
 
 $pdf = new FPDF();
 $pdf->AddPage();
+
+$pdf->SetFont('Arial', 'B', 18);
+$pdf->Cell(190, 10, utf8_decode("Usuários cadastrados"), 0, 0, 'C');
+$pdf->Ln(15);
+
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(20, 7, utf8_decode("Usuario"), 1, 0, 'C');
 $pdf->Cell(60, 7, utf8_decode("Email"), 1, 0, 'C');

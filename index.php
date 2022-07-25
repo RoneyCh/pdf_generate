@@ -20,15 +20,15 @@ session_start();
     ?>
     <form action="add.php" method="post">
         <label>Usuario</label>
-        <input type="text" name="user" id="user">
+        <input type="text" name="user" id="user" required>
         <label>Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <label>Rua</label>
-        <input type="text" name="rua" id="rua">
+        <input type="text" name="rua" id="rua" required>
         <label>Numero</label>
-        <input type="number" name="numero" id="numero">
+        <input type="number" name="numero" id="numero" required>
         <label>Bairro</label>
-        <input type="text" name="bairro" id="bairro">
+        <input type="text" name="bairro" id="bairro" required>
         <input type="submit" value="Cadastrar" name="cad_usuario">
     </form>
 </body>
