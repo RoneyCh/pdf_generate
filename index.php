@@ -11,6 +11,7 @@ session_start();
 </head>
 <body>
     <a href="consult.php">Gerar consulta PDF</a>
+    <a href="list_cad.php">Lista de cadastros</a>
     <h1>Cadastro</h1>
     <?php 
     if(isset($_SESSION['msg'])){
