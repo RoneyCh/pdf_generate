@@ -3,7 +3,7 @@ include_once('connection.php');
 require_once 'fpdf184/fpdf.php';
 
 
-$get_user = "SELECT * FROM usuario as u INNER JOIN endereco as en ON en.usuario_id=u.id";
+$get_user = "SELECT * FROM usuario as u LEFT JOIN endereco as en ON en.usuario_id=u.id";
 $result_user = mysqli_query($conn, $get_user);
 
 $pdf = new FPDF();
