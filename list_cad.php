@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('connection.php');
 
 $read_data = "SELECT u.id as uid, u.usuario, u.email,
@@ -21,6 +22,12 @@ $query_data = $conn->query($read_data);
 </head>
 <body>
     <h1>Lista de cadastro</h1>
+    <?php 
+    if(isset($_SESSION['apg'])){
+        echo $_SESSION['apg'];
+        unset($_SESSION['apg']);
+    }
+    ?>
     <table class="table">
   <thead>
     <tr>
