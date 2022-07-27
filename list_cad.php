@@ -53,7 +53,7 @@ $query_data = $conn->query($read_data);
         echo "<td>" . $row['bio'] . "</td>";
         echo "<td>" . $row['idade'] . "</td>";
         echo "<td>" . $row['profissao'] . "</td>";
-        echo "<td><a class='btn btn-danger' href='apagar.php?id=" . $row['uid'] . "'>Apagar</a></td>";
+        echo "<td><a class='btn btn-danger' href='apagar.php?id=" . $row['uid'] . "'>Apagar</a> <a class='btn btn-info' href='edit-venda.php?id=" . $row['uid'] . "'>Editar</a></td>";
         echo "</tr>";
         echo "</tbody>";
 
