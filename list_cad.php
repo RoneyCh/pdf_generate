@@ -21,6 +21,9 @@ $query_data = $conn->query($read_data);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+<a href="index.php" style="margin: 10px">Cadastro</a>
+    <a href="consult.php" style="margin: 10px">Gerar consulta PDF</a>
+    <a href="list_cad.php" style="margin: 10px">Lista de cadastros</a>
     <h1>Lista de cadastro</h1>
     <?php 
     if(isset($_SESSION['apg'])){

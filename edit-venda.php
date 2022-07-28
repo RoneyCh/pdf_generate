@@ -17,8 +17,11 @@ $row = $query_edit->fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-    <a href="consult.php">Gerar consulta PDF</a>
-    <a href="list_cad.php">Lista de cadastros</a>
+    <div style="display: flex">
+    <a href="index.php" style="margin: 10px">Cadastro</a>
+    <a href="consult.php" style="margin: 10px">Gerar consulta PDF</a>
+    <a href="list_cad.php" style="margin: 10px">Lista de cadastros</a>
+    </div>
     <h1>Editar cadastro</h1>
     <?php 
     if(isset($_SESSION['msg'])){
@@ -53,7 +56,7 @@ $row = $query_edit->fetch_assoc();
         <input type="text" name="prof" id="prof" value="<?php echo $row['profissao'] ?>" required>
         </div>
         <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
-        <input type="submit" value="Editar" name="cad_usuario"> 
+        <input type="submit" value="Editar" name="edit_usuario"> 
     </form>
 </body>
 </html>

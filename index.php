@@ -10,8 +10,9 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <a href="consult.php">Gerar consulta PDF</a>
-    <a href="list_cad.php">Lista de cadastros</a>
+<a href="index.php" style="margin: 10px">Cadastro</a>
+    <a href="consult.php" style="margin: 10px">Gerar consulta PDF</a>
+    <a href="list_cad.php" style="margin: 10px">Lista de cadastros</a>
     <h1>Cadastro</h1>
     <?php 
     if(isset($_SESSION['msg'])){
